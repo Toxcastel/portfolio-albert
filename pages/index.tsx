@@ -7,7 +7,7 @@ export default function Home() {
                 <title>{`Albert's Portfolio`}</title>
                 <meta name="description" content="my portfolio with next, typescript, tailwind and frame motion" />
             </Head>
-            <h1>My portfolio</h1>
+            <h1 className="text-red-500">My portfolio</h1>
         </div>
     );
 }
