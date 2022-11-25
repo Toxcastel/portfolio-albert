@@ -8,7 +8,7 @@ type Props = {};
 
 const ExperienceCard = (props: Props) => {
     return (
-        <article className="flex flex-col rounded-lg items-center space-y-1 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden">
+        <article className="flex flex-col rounded-lg items-center space-y-1 flex-shrink-0 w-[400px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10  hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden">
             <motion.div className="h-32 w-32  " initial={{ y: -100, opacity: 0 }} transition={{ duration: 1.2 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
                 <Image  src={stp} alt="stp rapa nui" height={300} />
             </motion.div>
