@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import aboutImage from "../assets/tepi-tato.jpg";
@@ -39,7 +38,7 @@ function About({}: Props) {
             </motion.div>
             <div className="space-y-10 px-0 md:px-10 max-w-2xl">
                 <h4 className="text-4xl font-semibold">
-                    You can call me <span className="text-[#F7AB0A]">Albert</span>,
+                    You can call me <span className="text-[#0a5df7c2]">Albert</span>,
                 </h4>
                 <p>
                     {`A developer since 2022, with a background in civil engineering and archaeological back-office experience where most of my work
