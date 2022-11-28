@@ -1,9 +1,19 @@
 import React from "react";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
+import { SubmitHandler, useForm } from "react-hook-form";
 
 type Props = {};
 
-const Contact = (props: Props) => {
+type Inputs = {
+    example: string,
+    exampleRequired: string,
+}
+
+const Contact = (props: Props) => { 
+
+    const {register, handleSubmit, watch, formState:{errors}} = useForm<Inputs>();
+    const onSubmit: SubmitHandler<Inputs> = data => console.log(data)
+
     return (
         <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
             <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">Contact</h3>
@@ -20,14 +30,15 @@ const Contact = (props: Props) => {
                     </div>
                 </div>
                 <form className="flex flex-col space-y-2 w-fit mx-auto">
-                    <div>
-                        <input type="text" /><input type="text" />
+                    <div className="flex space-x-2">
+                        <input placeholder="Name" className="contactInput" type="text" />
+                        <input placeholder="Email" className="contactInput" type="email" />
                     </div>
 
-                    <input type="text" />
+                    <input placeholder="Subject" className="contactInput" type="text" />
 
-                    <textarea />
-                    <button>Submit</button>
+                    <textarea placeholder="Message" className="contactInput" />
+                    <button type="submit" className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg">Submit</button>
                 </form>
             </div>
         </div>
