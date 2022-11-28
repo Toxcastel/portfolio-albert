@@ -43,7 +43,7 @@ export default function Header({}: Props) {
                 transition={{ duration: 1.3 }}
                 className="flex flex-row items-center text-gray-300 cursor-pointer"
             >
-                <SocialIcon className="cursor-pointer" network="email" fgColor="gray" bgColor="transparent" />
+                <SocialIcon className="cursor-pointer" network="email" fgColor="gray" bgColor="transparent" url="#contact"/>
                 <p className="uppercase hidden md:inline-flex text-sm text-gray-400">Contact me</p>
             </motion.div>
         </header>
