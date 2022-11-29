@@ -20,7 +20,7 @@ export default function Hero({}: Props) {
         <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
             <BackgroundCircles />
 
-            <Image className="relative rounded-full h-40 w-40 mx-auto object-cover" src={profileImage} alt="albert-profile-picture" />
+            <Image className="relative rounded-full h-40 w-40 mx-auto object-cover" src={profileImage} alt="albert-profile-picture" priority={true} />
             <div className="z-20">
                 <h2 className="text-md uppercase text-gray-500 font-bold pb-2 tracking-[10px]">alberto castel rapu</h2>
                 <h1 className="text-md font-semibold px-10">
