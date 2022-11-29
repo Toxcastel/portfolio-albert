@@ -47,7 +47,7 @@ export default function Home() {
             <Link href="#hero">
                 <footer className="sticky bottom-5 w-full cursor-pointer">
                     <div className="flex items-center justify-center">
-                        <Image className="rounded-full h-10 w-10  filter grayscale hover:grayscale-0 cursor-pointer" src={profile} alt="go top" />
+                        <Image className="rounded-full h-10 w-10  filter grayscale hover:grayscale-0 cursor-pointer" src={profile} alt="go top" priority={true}/>
                     </div>
                 </footer>
             </Link> 
