@@ -29,7 +29,7 @@ export default function Header({}: Props) {
                 <SocialIcon url="https://github.com/Toxcastel" fgColor="gray" bgColor="transparent" target="_blank" />
                 <SocialIcon url="https://www.instagram.com/toxcastel/" fgColor="gray" bgColor="transparent" target="_blank" />
             </motion.div>
-            <Link href="#contact">
+            
                 <motion.div
                     initial={{
                         x: 500,
@@ -44,10 +44,9 @@ export default function Header({}: Props) {
                     transition={{ duration: 1.3 }}
                     className="flex flex-row items-center text-gray-300 cursor-pointer"
                 >
-                    <SocialIcon className="cursor-pointer" network="email" fgColor="gray" bgColor="transparent" />
-                    <p className="uppercase hidden md:inline-flex text-sm text-gray-400">Contact me</p>
+                    <SocialIcon url="#contact" className="cursor-pointer" network="email" fgColor="gray" bgColor="transparent" />
                 </motion.div>
-            </Link>
+        
         </header>
     );
 }
