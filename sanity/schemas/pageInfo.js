@@ -22,6 +22,16 @@ export default {
       }
     },
     {
+      name: "enjoy",
+      title: "Enjoy",
+      type: "array",
+      of: [
+        {
+          type: "string",
+        }
+      ]
+    },
+    {
       name: "backgroundInformation",
       title: "BackgroundInformation",
       type: "string"
