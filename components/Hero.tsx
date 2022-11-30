@@ -28,7 +28,7 @@ export default function Hero({pageInfo}: Props) {
             <div className="z-20">
                 <h2 className="text-md uppercase text-gray-500 font-bold pb-2 tracking-[10px]">{pageInfo?.name}</h2>
                 <h1 className="text-md font-semibold px-10">
-                    Engineer | Developer
+                    {pageInfo?.role}
                     <p>
                         I enjoy{" "}
                         <span>
