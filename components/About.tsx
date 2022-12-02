@@ -36,8 +36,7 @@ function About({pageInfo}: Props) {
                     alt="stf-tato"
                     src={urlFor(pageInfo?.profilePic).url()}
                     width={1000}
-                    
-                    className="-mb-20 md:mb-0 flex-shrink-0 max-h-[400px] invisible md:block hidden rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]"
+                    className="-mb-20 md:mb-0 flex-shrink-0 max-h-[400px] md:block hidden rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]"
                     priority
                     height={1000}
                 />
