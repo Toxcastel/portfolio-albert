@@ -11,35 +11,45 @@ type Props = {
 
 const ExperienceCard = ({ experience }: Props) => {
     return (
-        <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10  hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden">
-            <motion.div
-                className="h-20 w-20 object-cover object-center"
-                initial={{ y: -100, opacity: 0 }}
-                transition={{ duration: 1.2 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-            >
-                <Image src={urlFor(experience?.companyImage).url()} alt="stp rapa nui" height={300} width={300} className="h-20 w-20" />
-            </motion.div>
+        <article className="flex flex-col md:flex-row rounded-lg items-center  flex-shrink-0 w-screen md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10  hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden">
+            <div id="job-title" className="md:min-w-[30%] flex flex-col items-center md:space-y-7">
+                <motion.div
+                    className="md:max-h-[150px] md:max-w-[150px] object-cover object-center hidden md:block"
+                    initial={{ y: -100, opacity: 0 }}
+                    transition={{ duration: 1.2 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                >
+                    <Image src={urlFor(experience?.companyImage).url()} alt="stp rapa nui" height={300} width={300} className="" />
+                </motion.div>
 
-            <div className="px-0 md:px-10">
-                <h4 className="text-2xl font-light">{experience.jobTitle}</h4>
-                <p className="font-bold text-1xl mt-1">{experience.company}</p>
-                <div className="flex space-x-2 my-2">
-                    {experience.technologies.map((tech) => (
-                        <Image
-                            key={tech._id}
-                            src={urlFor(tech.image).url()}
-                            width={200}
-                            height={200}
-                            className="h-10 w-10 rounded-full"
-                            alt="arcgis logo"
-                        />
-                    ))}
+                <div className="px-0 md:px-10">
+                    <h4 className="text-2xl font-light">{experience.jobTitle}</h4>
+                    <p className="font-bold text-1xl mt-1">{experience.company}</p>
+                    <div className="flex space-x-2 my-2">
+                        {experience.technologies.map((tech) => (
+                            <div key={tech._id} className="relative">
+                                <Image src={urlFor(tech.image).url()} width={200} height={200} className="h-7 w-7 rounded-full" alt="arcgis logo" />
+                                <div className="opacity-0 hover:opacity-100 duration-300 absolute inset-0 z-10 flex justify-center items-center  text-gray-300 ">
+                                    <br />
+                                    <br />
+                                    {tech.title}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
-                <p className="uppercase py-5 text-gray-300">{new Date(experience.dateStarted).toDateString()}{" "}-{" "}{experience.isCurrentlyWorkingHere?"Present":new Date(experience.dateEnded).toDateString()}</p>
-                <ul className="list-disc space-y-4 ml-5 text-md h-80 overflow-y-scroll">
-                    <li>{experience.points}</li>
+            </div>
+            <div id="job-description" className="overflow-auto">
+                <p className="uppercase  text-gray-300">
+                    <>
+                        {experience.dateStarted}- {experience.isCurrentlyWorkingHere ? "Present" : experience.dateEnded}
+                    </>
+                </p>
+                <ul className="list-disc space-y-4 ml-5 text-md h-80 ">
+                    {experience.points.map((point) => (
+                        <li key={experience._id}>{point}</li>
+                    ))}
                 </ul>
             </div>
         </article>
