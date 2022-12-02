@@ -25,7 +25,7 @@ export default function Header({ socials }: Props) {
                 transition={{
                     duration: 1.5,
                 }}
-                className="flex flex-row items-center"
+                className="flex flex-row items-center space-x-0"
             >
                 {/* Social Icons: npm i react-social-icons */}
                 {socials.map((social) => (
