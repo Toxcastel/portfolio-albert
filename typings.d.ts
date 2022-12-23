@@ -1,3 +1,4 @@
+// interface base, de la cual las siguientes serán una extensión de ella:
 interface SanityBody {
     _createdAt: string;
     _id: string;
@@ -5,6 +6,7 @@ interface SanityBody {
     _updatedAt: string;
 }
 
+// interface de tipo imagen con referencia. Esta interface se guarda para todas las imágenes y se utiliza el tipo para el profile, header, tech, etc.
 interface Image {
     _type: "image";
     asset: {
@@ -12,6 +14,7 @@ interface Image {
         _type: "reference";
     };
 }
+
 
 export interface PageInfo extends SanityBody {
     _type: "pageInfo";
