@@ -25,7 +25,7 @@ export default function Hero({pageInfo}: Props) {
             <BackgroundCircles />
 
             <Image className="relative rounded-full h-40 w-40 mx-auto object-cover" src={urlFor(pageInfo?.heroImage).url()} width={1000} height={1000} alt="albert-profile-picture" priority={true} />
-            <div className="z-20">
+            <div className="z-10">
                 <h2 className="text-md uppercase text-gray-500 font-bold pb-2 tracking-[10px]">{pageInfo?.name}</h2>
                 <h1 className="text-md font-semibold px-10">
                     {pageInfo?.role}
