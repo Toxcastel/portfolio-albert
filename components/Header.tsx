@@ -24,8 +24,9 @@ export default function Header({ socials }: Props) {
                 transition={{
                     duration: 1.5,
                 }}
-                className="sm:hidden flex-row items-center space-x-0"
+                className="sm:hidden flex-row items-center space-x-0 "
             >
+                
                 <SideBar />
             </motion.div>
             {/* Watch framer-motion documentation */}
@@ -63,7 +64,7 @@ export default function Header({ socials }: Props) {
                     scale: 1,
                 }}
                 transition={{ duration: 1.3 }}
-                className="flex flex-row items-center text-gray-300 cursor-pointer"
+                className="sm:flex flex-row items-center text-gray-300 cursor-pointer hidden"
             >
                 <SocialIcon url="#contact" className="cursor-pointer" network="email" fgColor="gray" bgColor="transparent" />
             </motion.div>
