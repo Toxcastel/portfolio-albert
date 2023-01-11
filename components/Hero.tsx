@@ -2,7 +2,6 @@ import Image from "next/image";
 import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "../components/BackgroundCircles";
-import profileImage from "../assets/albert-profile.jpg";
 import Link from "next/link";
 import { PageInfo } from "../typings";
 import { urlFor } from '../sanity';
@@ -38,7 +37,7 @@ export default function Hero({pageInfo}: Props) {
                     </p>
                 </h1>
 
-                <div className="pt-5">
+                <div className="pt-5 hidden sm:block">
                     <Link href="#about">
                         <button className="heroButton">About</button>
                     </Link>

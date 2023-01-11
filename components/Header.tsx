@@ -27,7 +27,7 @@ export default function Header({ socials }: Props) {
                 className="sm:hidden flex-row items-center space-x-0 "
             >
                 
-                <SideBar />
+                <SideBar socials={socials}/>
             </motion.div>
             {/* Watch framer-motion documentation */}
             <motion.div
