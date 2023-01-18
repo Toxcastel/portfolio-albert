@@ -29,7 +29,7 @@ const Projects = (props: Props) => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             key={i + 1}
-                            className="relative h-[200px] w-[200px]"
+                            className="relative object-cover"
                         >
                             <Image src={xavia} alt="img" className="object-contain" />
                         </motion.div>
