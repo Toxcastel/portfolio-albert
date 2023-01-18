@@ -34,14 +34,14 @@ const SideBar = ({ socials }: Props) => {
                             About
                         </button>
                     </Link>
-                    <Link href="#experience">
-                        <button className="sideBarMenu" onClick={() => setOpen(!open)}>
-                            Experience
-                        </button>
-                    </Link>
                     <Link href="#skills">
                         <button className="sideBarMenu" onClick={() => setOpen(!open)}>
                             Skills
+                        </button>
+                    </Link>
+                    <Link href="#experience">
+                        <button className="sideBarMenu" onClick={() => setOpen(!open)}>
+                            Experience
                         </button>
                     </Link>
                     <Link href="#projects">

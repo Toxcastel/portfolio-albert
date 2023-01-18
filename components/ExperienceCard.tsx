@@ -11,7 +11,7 @@ type Props = {
 
 const ExperienceCard = ({ experience }: Props) => {
     return (
-        <article className="flex flex-col md:flex-row rounded-lg items-center space-y-5 md:space-x-2  flex-shrink-0 w-screen md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10  hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden">
+        <article className="flex flex-col md:flex-row rounded-lg items-center space-y-5 md:space-x-2  flex-shrink-0 w-screen md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10  sm:hover:opacity-100 sm:opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden">
             <div id="job-title" className="md:min-w-[40%] flex flex-col items-center md:space-y-7">
                 <motion.div
                     className="md:h-[120px] md:w-[120px] object-cover object-center hidden md:block"
@@ -20,7 +20,7 @@ const ExperienceCard = ({ experience }: Props) => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <Image src={urlFor(experience?.companyImage).url()} alt="stp rapa nui" height={300} width={300} className="grayscale-[50%]" />
+                    <Image src={urlFor(experience?.companyImage).url()} alt={experience.company} height={300} width={300} className="grayscale-[50%]" />
                 </motion.div>
 
                 <div className="px-0 md:px-10 ">
