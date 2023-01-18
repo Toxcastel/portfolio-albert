@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
-import Skill from "./Skill";
+import { Skill } from "../typings";
+import UniqueSkill from "./UniqueSkill";
 
-type Props = {};
+type Props = {
+    skills: Skill[];
+};
 
-const Skills = (props: Props) => {
+const Skills = ({ skills }: Props) => {
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -13,16 +16,12 @@ const Skills = (props: Props) => {
         >
             <h3 className="absolute top-0 p-5 sm:top-[4rem] uppercase sm:tracking-[20px] tracking-[10px]  text-gray-500 text-2xl">Skills</h3>
 
-
             <div className="grid grid-cols-3 sm:grid-cols-4 gap-5">
-                <Skill />
-                <Skill />
-                <Skill />
-                <Skill />
-                <Skill />
-                <Skill />
-                <Skill />
-                <Skill />
+                {skills?.map((skill, i) => (
+                    <div key={i}>
+                        <UniqueSkill skill={skill}/>
+                    </div>
+                ))}
             </div>
         </motion.div>
     );
