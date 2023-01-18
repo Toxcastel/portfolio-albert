@@ -1,10 +1,13 @@
 import { motion } from "framer-motion";
+import { urlFor } from "../sanity";
+import { Skill } from "../typings";
 
 type Props = {
     directionLeft?: boolean;
+    skill: Skill
 };
 
-const Skill = ({ directionLeft }: Props) => {
+const UniqueSkill = ({ directionLeft, skill }: Props) => {
     return (
         <div className="group relative flex cursor-pointer">
             <motion.img
@@ -14,8 +17,8 @@ const Skill = ({ directionLeft }: Props) => {
                 }}
                 transition={{ duration: 1 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                className="rounded-full border border-gray-500 object-cover p-2 w-24 h-24 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out"
+                src={urlFor(skill?.image).url()}
+                className=" w-16 h-16 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out"
             />
             {/* <div className="absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white h-24 w-24 md:w-28 md:h-28 xl:w-32 xl:h-32 rounded-full z-0">
                 <motion.div
@@ -34,4 +37,4 @@ const Skill = ({ directionLeft }: Props) => {
     );
 };
 
-export default Skill;
+export default UniqueSkill;
